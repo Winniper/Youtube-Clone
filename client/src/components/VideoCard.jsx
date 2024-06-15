@@ -4,9 +4,8 @@ import { Box, Typography } from "@mui/material"
 // thumbnail:item.snippet.thumbnails.high.url
 
 const VideoCard = ({item}) => {
-  console.log(item)
   return (
-    <Link to={`/video/${item.id.videoID}`}>
+    <Link to={`/video/${item.id.videoId}`}>
     <Box sx={{width: '320px'}}>
       <img src={item.snippet.thumbnails.medium.url} alt="thumbnail" />
       <Typography mt={1} mb={0.8} sx={{color:'#fff',fontWeight: 550, fontSize: 15}}>
