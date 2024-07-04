@@ -37,8 +37,8 @@ const VideoDetail = () => {
   const {snippet:{title,channelTitle},statistics :{viewCount,likeCount}} = data
 
   return (
-    <Box pt={'10vh'} sx={{display:'flex',bgcolor:'#0F0F0F',height:'auto'}}>
-      <Box sx={{width:'100%', height:'100vh',display:'flex',flexDirection:'column',marginLeft:'3.5rem'}}>
+    <Box pt={'10vh'} sx={{display:'flex',flexDirection:{xs:"column",sm:"column",md:"column",lg:"row"},bgcolor:'#0F0F0F',height:'auto',width:'100%'}}>
+      <Box sx={{width:'100%', height:'100vh',display:'flex',flexDirection:'column',marginLeft:{xs:"0",sm:"0",md:"0",lg:"3.5rem"}}}>
       <ReactPlayer url={`https://www.youtube.com/watch?v=${id}`} playing controls width={'90%'} height={'83%'}/>
       <Typography sx={{color:'#ffff',fontWeight: 550,marginTop:'1rem',fontSize:23}}>
         {title}
@@ -63,7 +63,7 @@ const VideoDetail = () => {
       </Box>
       </Box>
 
-      <Box sx={{paddingRight:'6rem',width:'auto'}}>
+      <Box sx={{paddingRight:{xs:"0",sm:"0",md:"0",lg:"6rem"},paddingLeft:{xs:"3rem",sm:"3rem",md:"3rem",lg:"0"},width:'auto'}}>
       {videos.map((item,idx) => {
         return(
         <VideoCard item={item} key={idx} />

@@ -11,7 +11,7 @@ const Navbar = ({setView}) => {
   return (
     <Box sx={{bgcolor : '#0F0F0F', display: 'flex', alignItems: 'center', justifyContent:'space-between', height:'10vh',position:'fixed',width:'100%'}}>
         <Box sx={{display:'flex', pl:1.5}}>
-        <IconButton sx={{'&:hover':{bgcolor:'#2F2F2F'}}} onClick={() => setView(prev => !prev)}>
+        <IconButton sx={{'&:hover':{bgcolor:'#2F2F2F'}, display: {xs:"none",sm:"none",md:"none",lg:"block"}}} onClick={() => setView(prev => !prev)}>
             <MenuIcon sx={{color:'#fff'}}/>
         </IconButton>
         <Link to={'/'} style={{ textDecoration: 'none' }}>

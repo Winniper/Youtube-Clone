@@ -7,7 +7,7 @@ import SportsCricketIcon from '@mui/icons-material/SportsCricket';
 
 const Sidebar = ({view,setSelectedCategory}) => {
   return (
-    <Box sx={{bgcolor:'#0F0F0F', height:'90vh', display: 'flex', flexDirection:'column', alignItems:'center',justifyContent: 'space-between',width:view === true?'12vw':'5vw',paddingTop:'0.5rem',position:'fixed'}}>
+    <Box sx={{bgcolor:'#0F0F0F', height:'90vh', display:{xs:"none",sm:"none",md:"none",lg:"flex"}, flexDirection:'column', alignItems:'center',justifyContent: 'space-between',width:view === true?'12vw':'5vw',paddingTop:'0.5rem',position:'fixed'}}>
         <Box sx={{width: '100%', display:'flex', flexDirection:'column', rowGap:'1.2rem'}}>
             <Box sx={{width:'100%',display:'flex',alignItems:'center',justifyContent:'flex-start', '&:hover':{bgcolor:'#3F3F3F'}, borderRadius: '0.7rem',gap:'2rem',paddingLeft:'2rem'}} onClick={() => setSelectedCategory("New")}>
                 <HomeIcon sx={{color:'#fff'}} fontSize="large"/>
